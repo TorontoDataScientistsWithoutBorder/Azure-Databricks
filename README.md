@@ -1,3 +1,5 @@
+https://us04web.zoom.us/j/77603464680?pwd=to01hALjei7kyuB3Mq2fat6vXumjeT.1
+
 <!-- README.md was wriiten in beautiful MacDown  -->
 # Microsoft Azure Databricks
 

@@ -137,6 +137,13 @@ $Region = $locations.Get($rand).Location
 Write-Host "Creating $resourceGroupName resource group in $Region ..."
 New-AzResourceGroup -Name $resourceGroupName -Location $Region | Out-Null
 
+# Create Databricks workspace
+$templateFile = "template.json"
+$parameterFile = "parameters.json"
+
+New-AzResourceGroupDeployment -Name DatabricksDeployment -ResourceGroupName $resourceGroupName `
+  -TemplateFile $templateFile -TemplateParameterFile $parameterFile
+
 # Create Synapse workspace
 $synapseWorkspace = "synapse$suffix"
 $dataLakeAccountName = "datalake$suffix"
